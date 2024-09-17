@@ -283,7 +283,7 @@ const updatePassword = async (req, res) => {
     if (!oldPassword || !newPassword) {
       return res
         .status(400)
-        .json({ success: false, message: "Enter all fiels..." });
+        .json({ success: false, message: "Enter all fields..." });
     }
     const isMatch = await bcrypt.compare(oldPassword, user.password);
     if (!isMatch) {
